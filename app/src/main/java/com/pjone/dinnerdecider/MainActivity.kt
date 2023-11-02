@@ -50,7 +50,7 @@ fun DeciderInput() {
         ) {
             Image(painter = painterResource(R.drawable.dd_logo), modifier = Modifier.defaultMinSize(250.dp), contentDescription = null)
             Text(
-                text = "Dinner Check",
+                text = "Dinner Decider",
             )
             TextField(
                 value = text,
