@@ -69,15 +69,14 @@ fun QuizApp() {
                     onClick = { answer1 = 0; answer2 = 0 }) { Text("Reset") }
                 Button(onClick = { calculateQuizScore() }) { Text("Submit") }
             }
-            AlertDialogExample(showDialog, dialogTitle = "Quiz Score", dialogText = scoreText,
+            QuizResultDialog(showDialog, dialogTitle = "Quiz Score", dialogText = scoreText,
                 onConfirmation = { showDialog = false })
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AlertDialogExample(
+fun QuizResultDialog(
     show: Boolean,
     onConfirmation: () -> Unit,
     dialogTitle: String,

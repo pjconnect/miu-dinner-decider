@@ -19,7 +19,7 @@ fun MainActivity(navController: NavHostController) {
         Text(
             text = "Mobile Device Programming",
             fontSize = 22.sp,
-            modifier = Modifier.padding(bottom = 20.dp)
+//            modifier = Modifier.padding(bottom = 20.dp)
         )
         Column(verticalArrangement = Arrangement.Center) {
             Button(onClick = {
