@@ -21,7 +21,7 @@ import com.pjone.dinnerdecider.R
 @Composable
 fun ElectronicItems(navController: NavHostController) {
     var showDialog by remember { mutableStateOf(false) }
-    val items = ItemRepository();
+    val items = ProductRepository();
     var cartText by remember { mutableStateOf("Empty Cart") }
     val itemAdded = mutableListOf<String>()
     Column {
