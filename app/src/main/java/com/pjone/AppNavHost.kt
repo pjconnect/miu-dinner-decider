@@ -9,11 +9,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.pjone.assignment3.TableLayoutTest
+import com.pjone.assignment5.quizapp.ElectronicItemView
 import com.pjone.assignment5.quizapp.ElectronicItems
 import com.pjone.assignment5.quizapp.QuizApp
 import com.pjone.dinnerdecider.DeciderInput
@@ -39,7 +39,10 @@ class AppNavHost : ComponentActivity() {
             composable("DinnerDecider") { DeciderInput() }
             composable("TableLayoutTest") { TableLayoutTest() }
             composable("QuizApp") { QuizApp() }
-            composable("ElectronicItems") { ElectronicItems() }
+            composable("ElectronicItems") { ElectronicItems(navController = navController) }
+            composable("ElectronicItemView/{productId}") { backStackEntry -> ElectronicItemView(navController = navController,
+                productId = backStackEntry.arguments?.getString("productId")
+            ) }
         }
     }
 }
