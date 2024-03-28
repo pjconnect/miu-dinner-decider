@@ -1,2 +1,4 @@
-# Dinner Decider 
-#### Sample Application Build using `Kotlin`, `Jetpack Composer`
+# MIU Coursework
+## Dinner Decider Android APP
+
+#### Used `Kotlin`, `Jetpack Composer`, `NavHost` navigation
